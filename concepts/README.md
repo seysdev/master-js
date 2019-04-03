@@ -23,7 +23,7 @@ Para poder escribir código javascript, lo podemos hacer de 3 maneras.
 ```
 
 
-## Enlaces de interes y de lectura obligatoria
+## Enlaces de interes
 * [javascript](https://es.wikipedia.org/wiki/JavaScript)
 * [ecmascript](https://es.wikipedia.org/wiki/ECMAScript)
 * [lenguajes de programacion](https://es.wikipedia.org/wiki/Lenguaje_de_programaci%C3%B3n)
