@@ -22,6 +22,20 @@ Para poder escribir código javascript, lo podemos hacer de 3 maneras.
 <script src="script.js"></script>
 ```
 
+#### Comentarios
+Javascript tiene 2 tipos de comentarios; De una sola linea y multilinea.
+```
+// comentario de una sola linea
+```
+
+```
+/*
+Comentario
+muchas 
+lineas
+*/
+```
+
 
 ## Enlaces de interes
 * [javascript](https://es.wikipedia.org/wiki/JavaScript)
