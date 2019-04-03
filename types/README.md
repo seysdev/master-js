@@ -81,3 +81,44 @@ b instanceof Bar
 // true
 ```
 
+## Conversion de tipos de datos
+Para convertir los tipos de datos de un tipo a otro tenemos los siguientes metodos.
+
+### Convertir string a números
+
+* parseInt()
+* parseFloat()
+
+```
+parseInt("9999.12323213")
+// 9999
+
+parseFloat("9999.12323213")
+//9999.12323213
+```
+
+### Convertir numero a string
+* toString()
+
+```
+let a = 14;
+a.toString();
+
+// "14"
+```
+
+### Convertir diferentes tipos
+```
+let x = false;
+
+Number(x)
+// 0
+String(x)
+// "0"
+Boolean(x)
+// false
+```
+
+## Enlaces de interes 
+* [types](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Grammar_and_types)
+* [types2](https://javascript.info/types)
