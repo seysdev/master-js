@@ -122,3 +122,4 @@ Boolean(x)
 ## Enlaces de interes 
 * [types](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Grammar_and_types)
 * [types2](https://javascript.info/types)
+* [conversion types](https://www.w3schools.com/jsref/jsref_type_conversion.asp)
