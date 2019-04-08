@@ -4,38 +4,42 @@ Los operadores permiten manipular el valor de las variables, realizar operacione
 
 ## Operadores de Asignacion
 
-### Asignacion 
+### Asignacion
 
 Los operadores de asignacion sirven para asignar un valor a una variable.
 
 | Operador abreviado  | Significado |
 | ------------- | ------------- |
-| x = y  | x = y  |
+| x = y | x = y |
 
 ### Adicion o suma
 
 Para realizar sumas.
-| Operador abreviado  | Significado |
+
+| Operador abreviado | Significado |
 | ------------- | ------------- |
-| x += y  | x = x + y  |
+| x += y | x = x + y |
 
 ### Sustraccion o resta
 
 Para realizar restas.
-| Operador abreviado  | Significado |
+
+| Operador abreviado | Significado |
 | ------------- | ------------- |
-| x -= y  | x = x - y  |
+| x -= y | x = x - y |
 
 ### Multiplicacion
 
 Para realizar multiplicacion.
-| Operador abreviado  | Significado |
+
+| Operador abreviado | Significado |
 | ------------- | ------------- |
 | x *= y | x = x * y |
 
 ### Division
 
 Para realizar divisiones.
+
 | Operador abreviado | Significado |
 | ------------- | ------------- |
 | x /= y | x = x / y |
@@ -51,15 +55,16 @@ Para obtener el resto de una division.
 ### Exponenciacion o Potencia
 
 Para obtener la potencia.
-| Operador abreviado  | Significado |
+
+| Operador abreviado | Significado |
 | ------------- | ------------- |
-| x **= y | x = x ** y  |
+| x **= y | x = x ** y |
 
 ### Incremento
 
 Valido solo para valores numericos e incrementa los valores uno a uno.
 
-| Operador abreviado  | Significado |
+| Operador abreviado | Significado |
 | ------------- | ------------- |
 | ++numero | numero + 1 |
 
@@ -73,11 +78,12 @@ Valido solo para valores numericos y decrementa los valores uno a uno.
 
 ## Operadores de comparación
 
-Un operador de comparación compara sus operandos y devuelve un valor lógico en función de si la comparación es verdadera (true) o falsa (false). 
-| Operador  | Descripción | Ejemplos |
+Un operador de comparación compara sus operandos y devuelve un valor lógico en función de si la comparación es verdadera (true) o falsa (false).
+
+| Operador | Descripción | Ejemplos |
 | ------------- | ------------- | ------------- |
-| Igualdad (==) | Devuelve true si ambos operandos son iguales.  | 3 == "3" |
-| Desigualdad (!=) | Devuelve true si ambos operandos no son iguales.  | 3 != 4 |
+| Igualdad (==) | Devuelve true si ambos operandos son iguales. | 3 == "3" |
+| Desigualdad (!=) | Devuelve true si ambos operandos no son iguales. | 3 != 4 |
 | Estrictamente iguales (===) | Devuelve true si los operandos son iguales y tienen el mismo tipo.  | 3 === "3"; 3 === 3 |
 | Estrictamente desiguales (!==) | Devuelve true si los operandos no son iguales y/o no son del mismo tipo.  | 3 !== 3; 3 !== "3" |
 | Mayor que (>) | Devuelve true si el operando de la izquierda es mayor que el operando de la derecha.  | 3 > 2 |
@@ -94,4 +100,5 @@ Un operador de comparación compara sus operandos y devuelve un valor lógico en
 | NOT (!) | !expr | Le cambia el valor de true a false o de false a true |
 
 ## Enlaces de interes
+
 [Operadores de comparacion](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Expressions_and_Operators#Operadores_de_comparaci%C3%B3n)

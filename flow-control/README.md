@@ -1,4 +1,4 @@
-# Control de Flujo
+# Control de Flujo
 
 Javascript soporta un conjunto compacto de sentencias, específicamente para el manejo de flujo, que puedes usar para incorporar mayor interactividad a tus aplicaciones.
 
@@ -74,6 +74,7 @@ age > 18 ? (
 Puedes lanzar excepciones usando la sentencia throw y manejarlas usando las sentencias try...catch.
 
 ### Excepciones con Throw
+
 La forma más sencilla para lanzar errores es utilizando throw. Este comando permite enviar al navegador un evento similar al que se produce cuando ocurre algún imprevisto o nos encontramos ante un tipo inesperado de datos. El lenguaje permite enviar todo tipo de elementos, incluyendo texto, números, valores booleanos o incluso objetos. Sin embargo, la opción más usual es enviar el objeto nativo Error:
 
 ```javascript

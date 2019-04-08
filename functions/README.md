@@ -1,4 +1,4 @@
-# Function 
+# Function
 
 Son un conjunto de sentencias que realizan una tarea o calculan un valor.
 Para definir una funcion se utiliza la palabra reservada function seguido del nombre de la funcion y seguido de parentesis donde definimos los argumentos a recibir.

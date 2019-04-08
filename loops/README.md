@@ -41,6 +41,7 @@ do {
 ```
 
 ## while
+
 Una sentencia while ejecuta sus sentencias mientras la condición sea evaluada como verdadera. Una sentencia while tiene el siguiente aspecto:
 
 ```javascript
