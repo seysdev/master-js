@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    DOM
+
+    <div>
+            <strong>hello</strong>
+          </div>
+
+    <script>
+        // CREATION 
+
+        // p
+        let parrafo = document.createElement("p");
+        parrafo.style.background = "red";
+        parrafo.id = "ola";
+        let contentParrafo = document.createTextNode("hola mundo");
+        parrafo.appendChild(contentParrafo);
+        document.body.appendChild(parrafo);
+
+
+        // ul
+        let ul = document.createElement('ul'),
+            li = document.createElement('li');
+            li.textContent= 'uno';
+            ul.appendChild(li);
+            document.body.appendChild(ul)
+
+            // textLi = document.createTextNode('uno');
+            // li.appendChild(textLi);
+            // ul.appendChild(li);
+            // document.body.appendChild(ul);
+
+
+        // MOVING AND REMOVING ELEMENTS  
+        
+        let div = document.createElement('div');
+            div.textContent = 'DIV!!';
+            div.style.transition = "all 1s ease";            
+            document.body.appendChild(div);
+
+
+            // setTimeout(() => {
+            //     div.style.opacity = '0';
+                
+            //     setTimeout(() => {
+            //         document.body.removeChild(div);
+            //     }, 1000)
+            // }, 3000)
+    </script>
+</body>
+</html>
