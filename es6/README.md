@@ -4,7 +4,7 @@
 
 A travez de es6 la definicion de variables cambio, dandonos un alcance de bloque y evitando la elevacion o hoisting de las variables, se agregaron nuevas formas de definir valores utilizando las palabras reservadas __let__ y __const__.
 
-### [let](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/let)
+## [let](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/let)
 
 let nos permite declarar variables y que estas respeten el alcance de bloque donde fueron declaradas, tambien las variables let no tienen elevacion y de esta manera no hay problemas de
 sobre escritura de valores y tampoco tienen alcance global solo viven en el contexto de bloque donde fueron declaradas. Para acceder a las variables primero tenemos que declararlas si no estaremos entrando al TDZ(The Temporal Dead Zone) y tendremos un error de definicion.
@@ -53,7 +53,7 @@ sobre escritura de valores y tampoco tienen alcance global solo viven en el cont
     }
 ```
 
-### [const](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/const)
+## [const](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/const)
 
 Las variables tipo const tienen el mismo comportamiento que las tipo let, la diferencia es que estas son variables inmutables. Esto quiere decir que no se pueden sobre escribir.
 Las constantes se les tiene que definir un valor al momento de declararlas.
@@ -66,7 +66,7 @@ Las constantes se les tiene que definir un valor al momento de declararlas.
 
 Se agregaron metodos para manejar substrings
 
-### Metodos
+### Metodos
 
 * includes()
 * startsWith()
