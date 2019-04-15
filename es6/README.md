@@ -1,6 +1,7 @@
 # ES6
 
-## Variables
+## Variables.
+
 A travez de es6 la definicion de variables cambio, dandonos un alcance de bloque y evitando la elevacion o hoisting de las variables, se agregaron nuevas formas de definir valores utilizando las palabras reservadas __let__ y __const__.
 
 ## [let](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/let)
