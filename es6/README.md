@@ -1,6 +1,6 @@
 # ES6
 
-## Variables.
+## Variables
 
 A travez de es6 la definicion de variables cambio, dandonos un alcance de bloque y evitando la elevacion o hoisting de las variables, se agregaron nuevas formas de definir valores utilizando las palabras reservadas __let__ y __const__.
 
@@ -140,7 +140,7 @@ f(1, 2, 3, 4) // 6 (el cuarto parámetro no está desestructurado)
 
 ### Spread Operator
 El operador spread genera una lista de valores a partir de un array, se podria decir que es la operacion contraria de parametros rest.
-Spread operator tambien utiliza la connotacion de los "...", como los diferenciamos?? . La diferencia esta que los parametros rest lo usas en la cabezera de una funcion y 
+Spread operator tambien utiliza la connotacion de los "...", como los diferenciamos?? . La diferencia esta que los parametros rest lo usas en la cabezera de una funcion y
 spread operator se utiliza al invocar.
 
 ```javascript
@@ -327,7 +327,7 @@ function Father() {
 }
 
 function Son() {
-  this.sayHello = function() { 
+  this.sayHello = function() {
     //return console.log(Object.getPrototypeOf(this).sayHello.call(this))
     return super.sayHello() + ", como estas!";
   };
@@ -568,7 +568,7 @@ function Animal(animal) {
 
 ```
 
-Los simbolos se comportan como una constante pero nos dan una mayor flexibilidad 
+Los simbolos se comportan como una constante pero nos dan una mayor flexibilidad
 
 ```javascript
 const directions = {
