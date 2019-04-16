@@ -1004,3 +1004,303 @@ console.log(array1.copyWithin(0, 3, 4));
 console.log(array1.copyWithin(1, 3));
 // expected output: Array ["d", "d", "e", "d", "e"]
 ```
+
+## Modulos
+
+Los modulos son piezas de código que podemos escribir en ficheros independientes. Los módulos pueden tener código, como clases, funciones, objetos o simples datos primitivos, que se puede importar desde otros archivos.
+
+Con la palabra __"export"__ consigues exponer algún miembro del módulo, para que se pueda usar desde fuera. Con la palabra __"import"__ consigues traerte algo exportado por un módulo independiente.
+
+* __[export](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/export)__ Con la palabra reservador export podemos exportar los elementos que deseemos.
+
+```javascript
+// example 1
+// export for default lib.js
+export default function() { console.log('default')}
+import m import 'lib.js';
+
+// example 2
+function cube(x) {
+  return x * x * x;
+}
+const foo = Math.PI + Math.SQRT2;
+var graph = {
+    options:{
+        color:'white',
+        thickness:'2px'
+    },
+    draw: function(){
+        console.log('From graph draw function');
+    }
+}
+export { cube, foo, graph };
+
+// example 3
+export { import1 as name1, import2 as name2 }
+```
+
+* __[import](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/import)__ La sentencia import se usa para importar funciones que han sido exportadas desde un módulo externo.
+
+```javascript
+import {myExport} from '/modules/my-module.js';
+import {foo, bar} from "my-module.js";
+import {reallyReallyLongModuleExportName as shortName}
+  from '/modules/my-module.js';
+
+import '/modules/my-module.js';
+
+import myDefault from '/modules/my-module.js';
+import * as myModule from '/modules/my-module.js';
+
+```
+
+## [Classes](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Classes)
+
+Las clases de javascript, introducidas en ECMAScript 2015, son una mejora sintáctica sobre la herencia basada en prototipos de JavaScript. La sintaxis de las clases no introduce un nuevo modelo de herencia orientada a objetos en JavaScript. Las clases de JavaScript proveen una sintaxis mucho más clara y simple para crear objetos y lidiar con la herencia.
+
+```javascript
+class Poligono {
+  constructor (height, width) {
+    this.height = height;
+    this.width = width;
+  }
+  // Getter
+  get   area  ()   {
+     return this.calcArea();
+   }
+  // Método
+  calcArea () {
+    return this.height * this.width ;
+  }
+}
+
+const cuadrado = new Poligono (10, 10);
+
+console.log(cuadrado.area); // 100 
+```
+
+### Izado (Hoisting)
+
+Las clases no son izadas como las funciones, osea primero tenemos que declarar nuestras clases y luego recien usarlas.
+
+```javascript
+const p = new Poligono(); // ReferenceError
+
+class Poligono {}
+```
+
+### Metodos estaticos
+
+La palabra clave static define un método estático para una clase. Los métodos estáticos son llamados sin instanciar su clase y no pueden ser llamados mediante una instancia de clase. Los métodos estáticos son a menudo usados para crear funciones de utilidad para una aplicación.
+
+```javascript
+class Punto {
+  constructor ( x , y ){
+    this.x = x;
+    this.y = y;
+  }
+
+  static distancia ( a , b) {
+    const dx = a.x - b.x;
+    const dy = a.y - b.y;
+
+    return Math.sqrt ( dx * dx + dy * dy );
+  }
+}
+
+const p1 = new Punto(5, 5);
+const p2 = new Punto(10, 10);
+
+console.log (Punto.distancia(p1, p2)); // 7.0710678118654755
+```
+
+### Herencia
+
+La palabra clave extends es usada en declaraciones de clase o expresiones de clase para crear una clase hija.
+
+```javascript
+class Animal {
+  constructor(nombre) {
+    this.nombre = nombre;
+  }
+
+  hablar() {
+    console.log(this.nombre + ' hace un ruido.');
+  }
+}
+
+class Perro extends Animal {
+  hablar() {
+    console.log(this.nombre + ' ladra.');
+  }
+}
+```
+
+También se pueden extender las clases tradicionales basadas en funciones:
+
+```javascript
+function Animal (nombre) {
+  this.nombre = nombre;
+}
+Animal.prototype.hablar = function () {
+  console.log(this.nombre + 'hace un ruido.');
+}
+
+class Perro extends Animal {
+  hablar() {
+    super.hablar();
+    console.log(this.nombre + ' ladra.');
+  }
+}
+
+var p = new Perro('Mitzie');
+p.hablar();
+```
+
+### Super
+
+La palabra clave super es usada para llamar funciones del objeto padre.
+
+```javascript
+class Gato {
+  constructor(nombre) {
+    this.nombre = nombre;
+  }
+
+  hablar() {
+    console.log(this.nombre + ' hace ruido.');
+  }
+}
+
+class Leon extends Gato {
+  hablar() {
+    super.hablar();
+    console.log(this.nombre + ' maulla.');
+  }
+}
+```
+
+## Programacion Asincrona
+
+Que es asincrono ? Un evento o funcion asincrona es algo que no sabemos cuando se va resolver , puede resolverse ahora como mañana o nunca. Para poder manejar eventos asincronos tenemos los
+objetos [promise](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Usar_promesas) y a estos objetos le encadenamos funciones [callback](https://developer.mozilla.org/es/docs/Glossary/Callback_function) para poder resolver los estados de este ojbeto promise.
+
+### Promise
+
+El objeto Promise (Promesa) es usado para computaciones asíncronas. Una promesa representa un valor que puede estar disponible ahora, en el futuro, o nunca.
+
+Los estados de una promesa son
+
+* __pendiente (pending)__: estado inicial, no cumplida o rechazada.
+* __cumplida (fulfilled)__: significa que la operación se completó satisfactoriamente.
+* __rechazada (rejected)__: significa que la operación falló.
+
+Con los metodos __[then](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise/then)__ y __[catch](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise/catch)__ podemos manejar las promesas y estos pueden ser encadenados ya que devuelven una promesa tambien.
+
+### Sintaxis
+
+Las promesas se crean inicializando el objeto Promise, estos tienen 2 parametros, __resolve__ y __reject__.
+
+```javascript
+new Promise( /* ejecutor */ function(resolver, rechazar) {} );
+```
+
+### Metodos
+
+Una vez inicializado el objeto podemos acceder a sus metodos.
+
+* [all()](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise/all)
+
+El método Promise.all(iterable) devuelve una promesa que termina correctamente cuando todas las promesas en el argumento iterable han sido concluídas con éxito, o bien rechaza la petición con el motivo pasado por la primera promesa que es rechazada.
+
+* [race()](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise/race)
+
+El método Promise.race(iterable) retorna una promesa que se cumplirá o no tan pronto como una de las promesas del argumento iterable se cumpla o se rechace, con el valor o razón de rechazo de ésta.
+
+* [reject()](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise/reject)
+
+El método Promise.reject(reason) retorna un objeto Promise que es rechazado por la razón específicada.
+
+* [resolve()](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise/resolve)
+
+El método Promise.resolve(value) retorna un objeto Promise que es resuelto con el valor dado. Si el valor es una promise, esa promise es devuelta; si el valor es un thenable (si tiene un método "then"), el valor devuelto le seguirá a ese thenable, adoptando su estado; de otro modo la promise devuelta estará completada con el valor.
+
+* [then()](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise/then)
+
+El método then() retorna una Promesa. Recibe dos argumentos: funciones callback  para los casos de éxito y fallo de Promise.
+
+```javascript
+var promise1 = new Promise(function(resolve, reject) {
+  resolve('Success!');
+});
+
+promise1.then(function(value) {
+  console.log(value);
+  // expected output: "Success!"
+});
+```
+
+* [catch()](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise/catch)
+
+El método catch() retorna una Promise y solo se ejecuta en los casos en los que la promesa se marca como Reject. Se comporta igual que al llamar Promise.prototype.then(undefined, onRejected) (de hecho, al llamar obj.catch(onRejected) internamente llama a obj.then(undefined, onRejected)).
+
+```javascript
+var promise1 = new Promise(function(resolve, reject) {
+  throw 'Uh-oh!';
+});
+
+promise1.catch(function(error) {
+  console.log(error);
+});
+// expected output: Uh-oh!
+```
+
+* [async()](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/funcion_asincrona) La declaración de función async define una función asíncrona, la cual devuelve un objeto AsyncFunction. Este nos devuelve una promesa resuelta. Async se asegura que lo que devuelve la funcion sea una promesa.
+
+```javascript
+async function f() {
+  return 1;
+}
+
+f().then(alert); // 1
+
+async function f() {
+  return Promise.resolve(1);
+}
+
+f().then(alert); // 1
+```
+
+* [await](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/await)
+
+El operador await es usado para esperar a una Promise. Sólo puede ser usado dentro de una función async function. Await espera hasta que la promesa sea resuelta. Await pausa la ejecucion
+de la funcion hasta q todas las promesas se cumplan.
+
+```javascript
+async function f() {
+
+  let promise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("done!"), 1000)
+  });
+
+  let result = await promise; // wait till the promise resolves (*)
+
+  alert(result); // "done!"
+}
+
+f();
+```
+
+## [Fetch](https://developer.mozilla.org/es/docs/Web/API/Fetch_API/Utilizando_Fetch)
+
+La API Fetch proporciona una interfaz JavaScript para acceder y manipular partes del canal HTTP, como peticiones y respuestas. También provee un método global fetch() que proporciona una forma fácil y lógica de obtener recursos de forma asíncrona por la red.
+
+```javascript
+fetch('http://example.com/movies.json')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    console.log(myJson);
+  });
+```
