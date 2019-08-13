@@ -114,17 +114,17 @@ Para construir objetos podemos hacerlo de tres maneras,
 Podemos crear objetos sin necesidad de un constructor o instanciar una clase, para esto solo declaramos el objeto y sus propiedades.
 
 ```javascript
-const camilo = {
-  nombre: 'Camilo',
-  edad: 22,
+const sebastian = {
+  nombre: 'sebastian',
+  edad: 32,
   sexo: 'masculino',
-  pasatiempos: ['patinar', 'bailar'],
+  pasatiempos: ['cantar', 'programar'],
   hablar: function(){
     return `hola soy ${this.nombre}, y tengo ${this.edad} años`;
   }
 }
 
-console.log(camilo);
+console.log(sebastian);
 ```
 
 ### Objetos construidos
@@ -142,9 +142,9 @@ function Persona(nombre, edad, sexo, pasatiempos) {
   };
 }
 
-const camilo = new Persona('camilo', 22, 'masculino', ['patinar', 'bailar']);
+const sebastian = new Persona('sebastian', 22, 'masculino', ['cantar', 'programar']);
 
-console.log(camilo)
+console.log(sebastian)
 ```
 
 ### Object.create()
@@ -161,7 +161,7 @@ const person = {
 
 const me = Object.create(person);
 
-me.name = "Matthew"; // "name" is a property set on "me", but not on "person"
+me.name = "sebastian"; // "name" is a property set on "me", but not on "person"
 me.isHuman = true; // inherited properties can be overwritten
 
 me.printIntroduction();
@@ -178,12 +178,12 @@ const prototypeObject = {
 
 var person = Object.create(prototypeObject, {
   'firstName': {
-    value: "Virat",
+    value: "Sebastian",
     writable: true,
     enumerable: true
   },
   'lastName': {
-    value: "Kohli",
+    value: "Yabiku",
     writable: true,
     enumerable: true
   }
@@ -197,17 +197,17 @@ Para acceder a las propiedades o modificar esas se puede hacer de 2 maneras
 
 ```javascript
 const myObj = {
-  nombre: 'yeison',
+  nombre: 'sebastian',
   hablar: function(){
     return `hola soy ${this.nombre}`;
   }
 }
 
-console.log(myObj.nombre); //yeison
+console.log(myObj.nombre); //sebastian
 
 const propiedad = 'nombre'
 
-console.log(myObj[propiedad]); //yeison
+console.log(myObj[propiedad]); //sebastian
 ```
 
 ### Algunos Metodos de Object
